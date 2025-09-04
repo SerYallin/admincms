@@ -1,21 +1,61 @@
 {
   "name": "cms",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/SerYallin/admincms#readme",
-  "bugs": {
-    "url": "https://github.com/SerYallin/admincms/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SerYallin/admincms.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "back:dev": "npm --prefix ./backend run start:dev",
-    "front:dev": "npm --prefix ./frontend run dev"
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write src",
+    "style": "stylelint --allow-empty-input \"**/*.{css,scss}\"",
+    "style:fix": "stylelint --fix --allow-empty-input \"**/*.{css,scss}\""
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/platform-express": "^11.1.6",
+    "next": "15.5.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.3.2",
+    "@eslint/eslintrc": "^3",
+    "@eslint/js": "^9.34.0",
+    "@nestjs/schematics": "^11.0.7",
+    "@nestjs/testing": "^11.1.6",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.19.12",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/supertest": "^6.0.3",
+    "eslint": "^9.34.0",
+    "eslint-config-airbnb-extended": "^2.2.0",
+    "eslint-config-next": "15.5.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.3.0",
+    "jest": "^30.1.3",
+    "prettier": "^3.6.2",
+    "sass": "^1.92.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-order": "^7.0.0",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.1",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "typescript-eslint": "^8.42.0"
   }
 }
