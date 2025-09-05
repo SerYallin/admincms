@@ -6,7 +6,23 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): object {
-    return this.appService.getHello();
+  getApi(): object {
+    return {
+      path: '/api',
+      relations: {
+        users: '/api/users',
+        nodes: '/api/nodes',
+      },
+    };
+  }
+
+  @Get('/users')
+  getUsers(): object {
+    return this.appService.getUsers();
+  }
+
+  @Get('/nodes')
+  getNodes(): object {
+    return this.appService.getNodes();
   }
 }

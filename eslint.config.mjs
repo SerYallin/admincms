@@ -62,10 +62,28 @@ const nextEslintConfig = [
     name: 'next/typescript',
     rules: {
       'class-methods-use-this': 'off',
+      'no-plusplus': 'off',
+      'no-await-in-loop': 'off',
       'import/prefer-default-export': 'off',
       'import/no-anonymous-default-export': 'off',
       '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/prefer-namespace-keyword': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
+      'react/function-component-definition': [
+        2,
+        { namedComponents: 'arrow-function' },
+      ],
     },
   },
 ];

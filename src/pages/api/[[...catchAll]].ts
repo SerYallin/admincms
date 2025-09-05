@@ -1,3 +1,5 @@
+'use server';
+
 import { Backend } from '@backend/main';
 import { NextApiRequest, NextApiResponse } from 'next';
 
