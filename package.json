@@ -10,7 +10,8 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write src",
     "style": "stylelint --allow-empty-input \"**/*.{css,scss}\"",
-    "style:fix": "stylelint --fix --allow-empty-input \"**/*.{css,scss}\""
+    "style:fix": "stylelint --fix --allow-empty-input \"**/*.{css,scss}\"",
+    "test": "jest"
   },
   "dependencies": {
     "@heroui/button": "^2.2.25",
